@@ -1,6 +1,8 @@
 # Broadcast Video Feature Detection
 > The training data are for course usage only, so it's not permitted to publish online. `demo.ipynb` is not able to be re-rendered by cloning the repo. The detailed result of this project is in the [report](https://jerryishihara.github.io/csc420/pdf/CSC420_project.pdf).
 
+<img src="pic/clip2.gif"/>
+
 ## Features
 
 * [x] Video shot detection.
@@ -27,5 +29,3 @@
 <img src="pic/face_det.png"/>
 <img src="pic/gender.png"/>
 
-### Short Clip
-<img src="pic/clip2.gif"/>
