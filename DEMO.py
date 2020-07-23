@@ -1,34 +1,35 @@
-from FaceDetector import *
-from LogoDetector import *
-from GenderDetector import *
-from DetectorWraper import *
+# from FaceDetector import *
+# from LogoDetector import *
+# from GenderDetector import *
+# from DetectorWraper import *
+from Detector import DetectorWraper, FaceDetector, LogoDetector, GenderDetector, ShotDetector
 from utils import *
 from config import *
 
-DEMO_LOGO = {0: [LogoDetector('NBC'), LogoDetector('NBC exclusive')],
-			 1: [LogoDetector('voice'), LogoDetector('clevver news')],
-			 2: [LogoDetector('super woman'), LogoDetector('flick')]
-	
-			}
+DEMO_LOGO = {
+    0: [LogoDetector('NBC'),
+        LogoDetector('NBC exclusive')],
+    1: [LogoDetector('voice'),
+        LogoDetector('clevver news')],
+    2: [LogoDetector('super woman'),
+        LogoDetector('flick')]
+}
 
-DEMO_CLIP = {0: CLIP_1,
-			 1: CLIP_2,
-			 2: CLIP_3
-			}
+DEMO_CLIP = {0: CLIP_1, 1: CLIP_2, 2: CLIP_3}
 
 
 def face_demo(data):
-	idx = [30, 16, 97, 84]
-	# init face detector
-	faceDetector = FaceDetector()
-	# plot detection image
-	fig = plt.figure(figsize=(20, 10))
-	for _ in range(4):
-	    plt.subplot(2, 2, _ + 1)
-	    image = data['X'][_ % 3][idx[_]]
-	    pos = faceDetector.get_position(image)
-	    detect = faceDetector._visualize_detection(pos, image)
-	    plt.imshow(detect)
+    idx = [30, 16, 97, 84]
+    # init face detector
+    faceDetector = FaceDetector()
+    # plot detection image
+    fig = plt.figure(figsize=(20, 10))
+    for _ in range(4):
+        plt.subplot(2, 2, _ + 1)
+        image = data['X'][_ % 3][idx[_]]
+        pos = faceDetector.get_position(image)
+        detect = faceDetector._visualize_detection(pos, image)
+        plt.imshow(detect)
 
 
 def gender_demo(data, gender):
@@ -90,5 +91,3 @@ def logo_demo(data):
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     detect = detector.visualize_detection(image)
     plt.imshow(detect)
-
-
