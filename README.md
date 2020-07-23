@@ -1,2 +1,1 @@
-# Introduction to Image Understanding - CSC420
-This class is an introduction to fundamental concepts in image understanding, the subdiscipline of artificial intelligence that tries to make the computers "see". It will survey a variety of interesting vision problems and techniques. Specifically, the course will cover image formation, features, object and scene recognition and learning, multi-view geometry and video processing. Since Kinect is popular these days, we will also try to squeeze recognition with RGB-D data into the schedule. The goal of the class will be to grasp a number of computer vision problems and understand basic approaches to tackle them for real-world applications.
+# Broadcast video feature detection
