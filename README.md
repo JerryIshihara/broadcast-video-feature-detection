@@ -26,6 +26,5 @@
 <img src="pic/logo.png"/>
 
 ### Face & Gender Detection
-<img src="pic/face_det.png"/>
 <img src="pic/gender.png"/>
 
